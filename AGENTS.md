@@ -561,3 +561,27 @@ Notes:
 Keep the report factual.
 
 Do not claim success without verification.
+
+# Project-Specific Instructions
+
+## Stack
+
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Backend: NestJS, PostgreSQL, Prisma
+- Authentication: JWT
+- State management: Zustand
+- Forms: React Hook Form + Zod
+- API client: Axios
+- Tests: Vitest and Jest
+
+## Commands
+
+Frontend commands:
+
+```bash
+cd frontend
+npm run dev
+npm run lint
+npm run typecheck
+npm run test
+npm run build
