@@ -16,15 +16,6 @@ You can clone this repository, push it to your own GitHub, or merge its files di
 │       ├── read-agents-md.mdc         # Directs agents to AGENTS.md
 │       ├── doc-maintenance.mdc        # Enforces up-to-date documentation
 │       └── typescript-best-practices.mdc  # Example TS rules
-├── skills-contrib/                    # Canonical step-by-step workflow guidelines
-│   └── create-pr/
-│       └── SKILL.md                   # PR creation workflow skill
-├── docs/                              # Deep-dive architecture and design specs
-│   ├── README.md                      # Index of all project documentation
-│   └── architecture/
-│       └── overview.md                # Architectural design layout overview
-└── scripts/
-    └── sync-agent-rules.mjs           # CLI tool that generates symlinks for IDEs
 ```
 
 ## How to Implement in Your Project
@@ -38,12 +29,12 @@ You can clone this repository, push it to your own GitHub, or merge its files di
 Copy the files into your current workspace:
 ```bash
 # Copy agents config, scripts, rules, skills, and docs
-cp -R .agents skills-contrib docs scripts AGENTS.md CLAUDE.md /path/to/your/project/
+cp -R .agents AGENTS.md CLAUDE.md /path/to/your/project/
 ```
 Then, update your project's `.gitignore` and `package.json` to match the configuration templates provided in this repo.
 
 ## Synchronizing Rules
-Agent harnesses (like Cursor and Claude Code) expect rules at `.cursor/rules` and `.claude/rules`. To keep rules centralized in one place (`.agents/rules/`) without duplication:
+Agent harnesses (like Cursor and Claude Code) expect rules at and `.claude/rules`. To keep rules centralized in one place (`.agents/rules/`) without duplication:
 ```bash
 # Generate the IDE symlinks automatically
 pnpm rules:sync

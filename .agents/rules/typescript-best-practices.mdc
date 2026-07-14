@@ -1,0 +1,22 @@
+---
+description: Coding rules and best practices for TypeScript production files
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: false
+---
+
+# TypeScript Best Practices
+
+Guidelines for writing type-safe TypeScript.
+
+## Rules
+
+- **Never use `any`.** Use `unknown` if the type is not determined, and perform runtime checks/narrowing.
+- **Minimize type casts (`as`).** Prefer declaring explicit interfaces/types or writing type guard predicates:
+  ```typescript
+  // ✅ GOOD
+  function isUser(value: unknown): value is User {
+    return typeof value === 'object' && value !== null && 'id' in value;
+  }
+  ```
+- **Use `satisfies`** instead of type assertions when checking compatibility but keeping the specific type.
+- **Do not export types or modules solely for testing.** Keep private implementations encapsulated.

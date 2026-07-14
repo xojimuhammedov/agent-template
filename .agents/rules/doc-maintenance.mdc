@@ -1,0 +1,10 @@
+---
+description: Keep documentation, READMEs, and rules accurate and updated
+globs:
+alwaysApply: true
+---
+
+- When you make changes to a package/directory, make sure its docs stay up to date.
+- Do not reference transient project tasks, milestone names, or ticket IDs in code comments or long-term design documents. Enforce stable names.
+- If you introduce a new design pattern, document it under `docs/architecture/patterns/`.
+- Ensure all rules index tables reflect added rulecards.
